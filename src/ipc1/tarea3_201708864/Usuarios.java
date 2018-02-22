@@ -1,25 +1,24 @@
 package ipc1.tarea3_201708864;
 
 import java.util.Scanner;
+import ipc1.tarea3_201708864.IPC1Tarea3_201708864;
 
-public class IPC1Tarea3_201708864 {
-
+public class Usuarios {
+    
     public static void main(String[] args) {
-       
-       Scanner teclado = new Scanner(System.in);
+        
+        Scanner teclado = new Scanner(System.in);
        
         System.out.println("Ingrese el numero de la opcion");
         System.out.println("______________________________");
-        System.out.println("1. Usuarios");
-        System.out.println("2. Contador de digitos");
-        System.out.println("3. Tres numeros de mayor a menor");
-        System.out.println("4. Calcular promedio");
-        System.out.println("5. Salir");
+        System.out.println("1. Ingresar Usuarios");
+        System.out.println("2. Mostrar Usuarios Ascecndentes");
+        System.out.println("3. Mostrar Usuarios Descendentes");
+        System.out.println("4. Menu Principal");
         System.out.println("______________________________");
-        System.out.println("");
         
         int numero = teclado.nextInt();
-        System.out.println("");
+        
         
         switch(numero){
             
@@ -36,16 +35,14 @@ public class IPC1Tarea3_201708864 {
                 break;
             
             case 4:
-                Promedio.main(args);
+                IPC1Tarea3_201708864.main(args);
                 break;
                 
-            case 5:
-                break;
             default:
-                System.out.println("Debes insertar un número entre 1 y 5");
-                IPC1Tarea3_201708864.main(args);
-            }
+                System.out.println("Debes insertar un número entre 1 y 4");
         }
-    }   
+    }
     
-
+    
+    
+}
