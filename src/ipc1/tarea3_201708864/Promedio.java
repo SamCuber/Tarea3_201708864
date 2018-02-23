@@ -4,29 +4,35 @@ import java.util.Scanner;
 
 public class Promedio {
     
-    public static int alumno1[] = new int[4];   
+    public static int id1[] = new int[1];
+    public static int alumno1[] = new int[5];   
     public static int suma1=0;
-    public static float promedio1;
+    public static int promedio1;
     
-    public static int alumno2[] = new int[4];   
+    public static int id2[] = new int[1];
+    public static int alumno2[] = new int[5];   
     public static int suma2=0;
-    public static float promedio2;
+    public static int promedio2;
     
-    public static int alumno3[] = new int[4];   
+    public static int id3[] = new int[1];
+    public static int alumno3[] = new int[5];   
     public static int suma3=0;
-    public static float promedio3;
+    public static int promedio3;
     
-    public static int alumno4[] = new int[4];   
+    public static int id4[] = new int[1];
+    public static int alumno4[] = new int[5];   
     public static int suma4=0;
-    public static float promedio4;
+    public static int promedio4;
     
-    public static int alumno5[] = new int[4];   
+    public static int id5[] = new int[1];
+    public static int alumno5[] = new int[5];   
     public static int suma5=0;
-    public static float promedio5;
+    public static int promedio5;
     
-    public static int alumno6[] = new int[4];   
+    public static int id6[] = new int[1];
+    public static int alumno6[] = new int[5];   
     public static int suma6=0;
-    public static float promedio6;
+    public static int promedio6;
     
     
     public static void main(String[] args) {
@@ -41,12 +47,12 @@ public class Promedio {
         System.out.println("4. Alumno 4");
         System.out.println("5. Alumno 5");
         System.out.println("6. Alumno 6");
-        System.out.println("7. Menu Principal");
+        System.out.println("7. Ver tabla de notas");
+        System.out.println("8. Menu Principal");
         System.out.println("______________________________");
         System.out.println("");
         
-        int numero = teclado.nextInt();
-        
+        int numero = teclado.nextInt();     
         
         switch(numero){
             
@@ -75,10 +81,15 @@ public class Promedio {
                 break;
                 
             case 7:
+                Promedio.matriz(args);
+                break;
+                
+            case 8:
                 IPC1Tarea3_201708864.main(args);
                 break;
             default:
                 System.out.println("Debes insertar un número entre 1 y 7");
+                Promedio.main(args);
             }
         }
     
@@ -86,15 +97,16 @@ public class Promedio {
         Scanner teclado = new Scanner(System.in);    
 
         System.out.println("Ingresse las notas del alumno 1");
-        alumno1[0]=teclado.nextInt();
+        id1[0]=1;
         alumno1[1]=teclado.nextInt();
         alumno1[2]=teclado.nextInt();
         alumno1[3]=teclado.nextInt();
+        alumno1[4]=teclado.nextInt();
         
         for (int i = 0; i < alumno1.length; i++) {
             suma1+=alumno1[i];           
         }
-        promedio1=(suma1/alumno1.length);
+        promedio1=(suma1/4);
         Promedio.main(args);
     }
     
@@ -102,15 +114,16 @@ public class Promedio {
         Scanner teclado = new Scanner(System.in);    
         
         System.out.println("Ingresse las notas del alumno 2");
-        alumno2[0]=teclado.nextInt();
+        id2[0]=2;
         alumno2[1]=teclado.nextInt();
         alumno2[2]=teclado.nextInt();
         alumno2[3]=teclado.nextInt();
+        alumno2[4]=teclado.nextInt();
         
         for (int i = 0; i < alumno2.length; i++) {
             suma2+=alumno2[i];  
         }
-        promedio2=(suma2/alumno2.length);
+        promedio2=(suma2/4);
         Promedio.main(args);
         }
     
@@ -118,15 +131,16 @@ public class Promedio {
         Scanner teclado = new Scanner(System.in);    
         
         System.out.println("Ingresse las notas del alumno 3");
-        alumno3[0]=teclado.nextInt();
+        id3[0]=3;
         alumno3[1]=teclado.nextInt();
         alumno3[2]=teclado.nextInt();
         alumno3[3]=teclado.nextInt();
+        alumno3[4]=teclado.nextInt();
         
         for (int i = 0; i < alumno3.length; i++) {
             suma3+=alumno3[i];   
         }
-        promedio3=(suma3/alumno3.length);
+        promedio3=(suma3/4);
         Promedio.main(args);
         }
     
@@ -134,15 +148,16 @@ public class Promedio {
         Scanner teclado = new Scanner(System.in);    
         
         System.out.println("Ingresse las notas del alumno 4");
-        alumno4[0]=teclado.nextInt();
+        id4[0]=4;
         alumno4[1]=teclado.nextInt();
         alumno4[2]=teclado.nextInt();
         alumno4[3]=teclado.nextInt();
+        alumno4[4]=teclado.nextInt();
         
         for (int i = 0; i < alumno4.length; i++) {
             suma4+=alumno4[i];            
         }
-        promedio4=(suma4/alumno4.length);
+        promedio4=(suma4/4);
         Promedio.main(args);
         }
       
@@ -150,15 +165,16 @@ public class Promedio {
         Scanner teclado = new Scanner(System.in);    
         
         System.out.println("Ingresse las notas del alumno 5");
-        alumno5[0]=teclado.nextInt();
+        id5[0]=5;
         alumno5[1]=teclado.nextInt();
         alumno5[2]=teclado.nextInt();
         alumno5[3]=teclado.nextInt();
+        alumno5[4]=teclado.nextInt();
         
         for (int i = 0; i < alumno5.length; i++) {
             suma5+=alumno5[i];           
         }
-        promedio5=(suma5/alumno5.length);  
+        promedio5=(suma5/4);  
         Promedio.main(args);
         }
     
@@ -166,17 +182,32 @@ public class Promedio {
         Scanner teclado = new Scanner(System.in);    
         
         System.out.println("Ingresse las notas del alumno 6");
-        alumno6[0]=teclado.nextInt();
+        id6[0]=6;
         alumno6[1]=teclado.nextInt();
         alumno6[2]=teclado.nextInt();
         alumno6[3]=teclado.nextInt();
+        alumno6[4]=teclado.nextInt();
         
         for (int i = 0; i < alumno6.length; i++) {
             suma6+=alumno6[i];           
         }
-        promedio6=(suma6/alumno6.length);
+        promedio6=(suma6/4);
         Promedio.main(args);
         }
-                            
-}                  
+    
+    public static void matriz(String args[]){
+        
+        
+        System.out.println(+id1[0]+ "   " +alumno1[1]+ "    " +alumno1[2]+ "    " + alumno1[3]+ "   " +alumno1[4]+ "    " +promedio1);
+        System.out.println(+id2[0]+ "   " +alumno2[1]+ "    " +alumno2[2]+ "    " + alumno2[3]+ "   " +alumno2[4]+ "    " +promedio2);
+        System.out.println(+id3[0]+ "   " +alumno3[1]+ "    " +alumno3[2]+ "    " + alumno3[3]+ "   " +alumno3[4]+ "    " +promedio3);
+        System.out.println(+id4[0]+ "   " +alumno4[1]+ "    " +alumno4[2]+ "    " + alumno4[3]+ "   " +alumno4[4]+ "    " +promedio4);
+        System.out.println(+id5[0]+ "   " +alumno5[1]+ "    " +alumno5[2]+ "    " + alumno5[3]+ "   " +alumno5[4]+ "    " +promedio5);
+        System.out.println(+id6[0]+ "   " +alumno6[1]+ "    " +alumno6[2]+ "    " + alumno6[3]+ "   " +alumno6[4]+ "    " +promedio6);
 
+
+
+    }
+                            
+                
+}
