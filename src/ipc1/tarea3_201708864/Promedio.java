@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Promedio {
     
-    public static int id1[] = new int[1];
-    public static int alumno1[] = new int[5];   
-    public static int suma1=0;
-    public static int promedio1;
+    public static int id1[] = new int[1];                                       //declaro los id locales para acceder a ellos desde cualquier metodo
+    public static int alumno1[] = new int[5];                                   //declaro la variable alumno para las notas 
+    public static int suma1=0;                                                  //la suma de sus notas
+    public static int promedio1;                                                //el promedio
     
     public static int id2[] = new int[1];
     public static int alumno2[] = new int[5];   
@@ -35,12 +35,12 @@ public class Promedio {
     public static int promedio6;
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args) {                                    //metodo principal
         
         Scanner teclado = new Scanner(System.in);
        
-        System.out.println("Ingrese el id del alumno que desea registrar");
-        System.out.println("______________________________");
+        System.out.println("_____________________________________________");
+        System.out.println("Ingrese el id del alumno que desea registrar");     //vista del menu
         System.out.println("1. Alumno 1");
         System.out.println("2. Alumno 2");
         System.out.println("3. Alumno 3");
@@ -49,12 +49,12 @@ public class Promedio {
         System.out.println("6. Alumno 6");
         System.out.println("7. Ver tabla de notas");
         System.out.println("8. Menu Principal");
-        System.out.println("______________________________");
+        System.out.println("_____________________________________________");
         System.out.println("");
         
         int numero = teclado.nextInt();     
         
-        switch(numero){
+        switch(numero){                                                         //posibles casos
             
             case 1:
                 Promedio.alumno1(args);
@@ -88,28 +88,28 @@ public class Promedio {
                 IPC1Tarea3_201708864.main(args);
                 break;
             default:
-                System.out.println("Debes insertar un número entre 1 y 7");
+                System.out.println("Debes insertar un número entre 1 y 8");
                 Promedio.main(args);
             }
         }
     
-    public static void alumno1(String args[]){
-        Scanner teclado = new Scanner(System.in);    
+    public static void alumno1(String args[]){                                  //metodo para alumno 1
+        Scanner teclado = new Scanner(System.in);                               //su escaner
 
         System.out.println("Ingresse las notas del alumno 1");
-        id1[0]=1;
-        alumno1[1]=teclado.nextInt();
+        id1[0]=1;                                                               //el id para cada uno sera igual al alumno
+        alumno1[1]=teclado.nextInt();                                           //pido sus 4 notas con un arreglo o array
         alumno1[2]=teclado.nextInt();
         alumno1[3]=teclado.nextInt();
         alumno1[4]=teclado.nextInt();
         
-        for (int i = 0; i < alumno1.length; i++) {
-            suma1+=alumno1[i];           
+        for (int i = 0; i < alumno1.length; i++) {                              //con un ciclo for le doy un inicio y un final segun el tamaño del alumno
+            suma1+=alumno1[i];                                                  //hago la suma de sus notas
         }
-        promedio1=(suma1/4);
-        Promedio.main(args);
+        promedio1=(suma1/4);                                                    //calculo el promedio
+        Promedio.main(args);                                                    //vuelvo al main
     }
-    
+                                                                                //para cada uno de los 6 usuarios es lo mismo
     public static void alumno2(String args[]){
         Scanner teclado = new Scanner(System.in);    
         
@@ -195,17 +195,17 @@ public class Promedio {
         Promedio.main(args);
         }
     
-    public static void matriz(String args[]){
-        
-        
+    public static void matriz(String args[]){                                   //esta es la tabla final con todas las notas
+                                                                                // imprimo el id del alumno y sus respectivas notas con la posicion del arreglo
         System.out.println(+id1[0]+ "   " +alumno1[1]+ "    " +alumno1[2]+ "    " + alumno1[3]+ "   " +alumno1[4]+ "    " +promedio1);
         System.out.println(+id2[0]+ "   " +alumno2[1]+ "    " +alumno2[2]+ "    " + alumno2[3]+ "   " +alumno2[4]+ "    " +promedio2);
         System.out.println(+id3[0]+ "   " +alumno3[1]+ "    " +alumno3[2]+ "    " + alumno3[3]+ "   " +alumno3[4]+ "    " +promedio3);
         System.out.println(+id4[0]+ "   " +alumno4[1]+ "    " +alumno4[2]+ "    " + alumno4[3]+ "   " +alumno4[4]+ "    " +promedio4);
         System.out.println(+id5[0]+ "   " +alumno5[1]+ "    " +alumno5[2]+ "    " + alumno5[3]+ "   " +alumno5[4]+ "    " +promedio5);
         System.out.println(+id6[0]+ "   " +alumno6[1]+ "    " +alumno6[2]+ "    " + alumno6[3]+ "   " +alumno6[4]+ "    " +promedio6);
+        System.out.println("");
 
-
+        Promedio.main(args);
 
     }
                             
